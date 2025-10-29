@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 
-export type Personality = 'buffett' | 'soros' | 'cathie' | 'contrarian'
+export type Personality = 'buffett' | 'soros' | 'elon' | 'munger'
 export type AgentStatus = 'active' | 'processing' | 'idle' | 'error'
 export type SignalType = 'BUY' | 'SELL' | 'HOLD'
 

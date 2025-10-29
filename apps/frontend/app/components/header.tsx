@@ -7,8 +7,8 @@ import { useStore, type Personality } from '../store'
 const PERSONALITIES = {
   buffett: { label: 'Warren Buffett', color: 'bg-blue-600' },
   soros: { label: 'George Soros', color: 'bg-purple-600' },
-  cathie: { label: 'Cathie Wood', color: 'bg-cyan-600' },
-  contrarian: { label: 'Contrarian', color: 'bg-red-600' },
+  elon: { label: 'Elon Musk', color: 'bg-cyan-600' },
+  munger: { label: 'Charlie Munger', color: 'bg-red-600' },
 }
 
 export function Header() {

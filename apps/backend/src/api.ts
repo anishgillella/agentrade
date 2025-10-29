@@ -30,6 +30,7 @@ interface Signal {
 
 let currentSignals: Signal[] = [];
 let socketIOInstance: SocketIOServer | null = null;
+let orchestratorInstance: any = null;
 
 /**
  * Broadcast new signal to all connected clients
@@ -168,8 +169,21 @@ export async function startAPIServer() {
       res.status(400).json({ error: 'Invalid personality' });
       return;
     }
-    // TODO: Implement personality change in orchestrator
-    res.json({ personality, status: 'updated' });
+    
+    if (!orchestratorInstance) {
+      res.status(503).json({ error: 'Orchestrator not available' });
+      return;
+    }
+    
+    try {
+      orchestratorInstance.setPersonality(personality);
+      logger.info(`Personality changed to: ${personality}`);
+      res.json({ personality, status: 'updated' });
+    } catch (error) {
+      const msg = error instanceof Error ? error.message : String(error);
+      logger.error(`Failed to change personality: ${msg}`);
+      res.status(500).json({ error: 'Failed to change personality' });
+    }
   });
 
   // WebSocket connection handling

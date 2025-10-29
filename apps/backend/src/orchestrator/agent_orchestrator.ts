@@ -521,6 +521,29 @@ export class AgentOrchestrator {
   getRecentWorkflows(limit: number = 10): WorkflowState[] {
     return Array.from(this.activeWorkflows.values()).slice(0, limit);
   }
+
+  /**
+   * Change personality mode for analysis
+   */
+  setPersonality(personality: PersonalityMode): void {
+    logger.info(`Changing personality from ${this.personalityMode} to ${personality}`);
+    this.personalityMode = personality;
+    
+    // Recreate personality agent with new personality
+    const LLMClient = require('../infrastructure/llm_client.js').LLMClient;
+    const llmClient = new LLMClient({ apiKey: process.env.OPENROUTER_API_KEY });
+    
+    const PersonalityAgent = require('../agents/personality_agent.js').PersonalityAgent;
+    this.personalityAgent = new PersonalityAgent(
+      this.producer,
+      this.consumer,
+      llmClient,
+      personality
+    );
+    
+    logger.info(`✓ Personality agent recreated with mode: ${personality}`);
+  }
+
 }
 
 export default AgentOrchestrator;
