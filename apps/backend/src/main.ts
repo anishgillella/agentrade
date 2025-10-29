@@ -15,6 +15,7 @@ import { getLogger } from './utils/logger.js';
 import * as db from './infrastructure/database.js';
 import { createInvestmentAgent } from './agents/investment_agent.js';
 import { AgentOrchestrator } from './orchestrator/agent_orchestrator.js';
+import { startAPIServer } from './api.js';
 
 const logger = getLogger('main');
 
@@ -28,6 +29,10 @@ const PERSONALITY_MODE = args.includes('--personality')
 async function startOrchestrator(personalityMode: string = 'buffett') {
   try {
     logger.info(`🚀 Starting Agent Orchestrator with personality: ${personalityMode}`);
+
+    // Start API server first
+    logger.info('Starting API server...');
+    await startAPIServer();
 
     const llmClient = createLLMClient();
     const producer = createKafkaProducer('orchestrator-producer');
