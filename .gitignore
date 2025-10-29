@@ -1,0 +1,89 @@
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.crt
+.secrets
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build & Dist
+dist/
+build/
+*.tsbuildinfo
+out/
+.next/
+.nuxt/
+coverage/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+data/
+lancedb/
+
+# OS
+.DS_Store
+Thumbs.db
+.env.local.swp
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+
+# Testing
+.nyc_output/
+.coverage/
+.pytest_cache/
+.mocha_cache/
+
+# Runtime
+tmp/
+temp/
+pid/
+*.pid
+*.seed
+
+# Cache
+.cache/
+.eslintcache
+.prettier-cache
+node_modules/.cache
+
+# Production
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# API Keys and Secrets (double check)
+*_API_KEY
+*_SECRET
+*_TOKEN
