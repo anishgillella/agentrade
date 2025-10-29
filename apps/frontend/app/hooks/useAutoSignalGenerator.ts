@@ -84,32 +84,32 @@ const personalityStrategies: Record<string, Record<string, { strategy: string; h
       history: 'Soros holds during uncertainty avg 2-3 days. Win rate: 64%. Reflexivity loop still developing.',
     },
   },
-  cathie: {
+  elon: {
     BUY: {
       strategy: 'Disruptive innovation story with secular growth tailwinds. AI adoption metrics accelerating.',
-      history: 'Cathie AI plays: 81% win rate (highest). Tesla similar signal: +287% over 18mo. Conviction level: 9.2/10.',
+      history: 'Elon tech plays: 81% win rate on moonshot AI projects. Tesla similar signal: +287% over 18mo. Conviction level: 9.2/10.',
     },
     SELL: {
       strategy: 'Valuation stretched relative to growth prospects. Redeploying to better risk/reward.',
-      history: 'Cathie exit discipline: 61% avoid further downside. Tech rotation trade: +4.2% avg gain on exits.',
+      history: 'Elon exit discipline: 61% avoid further downside. Tech rotation trade: +4.2% avg gain on exits.',
     },
     HOLD: {
       strategy: 'Core innovation exposure maintained. Monitoring AI revenue penetration.',
-      history: 'Cathie 5-year hold strategy: 156% CAGR. Current thesis strength: 8.7/10. Conviction increasing.',
+      history: 'Elon 5-year hold strategy: 156% CAGR. Current thesis strength: 8.7/10. Conviction increasing.',
     },
   },
-  contrarian: {
+  munger: {
     BUY: {
       strategy: 'Crowd is bearish - classic contrarian setup. Capitulation signals often precede rallies.',
-      history: 'Contrarian capitulation plays: 76% win rate. Fear index correlation 0.89. Average subsequent rally: +18.3% in 30 days.',
+      history: 'Munger capitulation plays: 76% win rate. Fear index correlation 0.89. Average subsequent rally: +18.3% in 30 days.',
     },
     SELL: {
       strategy: 'Euphoria and FOMO at extreme levels. Contrarian signal to lock in profits.',
-      history: 'Contrarian euphoria exits: 79% accuracy. Prevents average 22.5% drawdowns. Greed index reading extreme.',
+      history: 'Munger euphoria exits: 79% accuracy. Prevents average 22.5% drawdowns. Greed index reading extreme.',
     },
     HOLD: {
       strategy: 'Sentiment indicators mixed. Waiting for more extreme readings.',
-      history: 'Contrarian waiting strategy: 58% leads to better entries. Sentiment extremes developing in 4-7 days historically.',
+      history: 'Munger waiting strategy: 58% leads to better entries. Sentiment extremes developing in 4-7 days historically.',
     },
   },
 }

@@ -79,12 +79,12 @@ export default function Home() {
         SELL: 'Macro headwinds building. Technical exhaustion suggests profit-taking opportunity.',
         HOLD: 'Waiting for clearer market direction before committing capital.',
       },
-      cathie: {
+      elon: {
         BUY: 'Disruptive innovation secular growth story. AI adoption metrics show acceleration in this sector.',
         SELL: 'Valuation stretched. Better growth opportunities elsewhere with more attractive risk/reward.',
         HOLD: 'Core holding for innovation exposure. Monitoring AI revenue contribution.',
       },
-      contrarian: {
+      munger: {
         BUY: 'Crowd is bearish - classic contrarian opportunity. Capitulation signals often precede rallies.',
         SELL: 'Euphoria index is extremely high. Contrarian signal for taking profits.',
         HOLD: 'Mixed sentiment still. Waiting for more extreme readings.',
